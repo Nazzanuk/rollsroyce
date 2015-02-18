@@ -1,0 +1,112 @@
+[ng-controller="headerCtrl"] {
+  .header {
+    background: white;
+    height: 100px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+
+    .header-menu {
+      line-height: 40px;
+      width: 40px;
+      font-size: 20px;
+      text-align: center;
+      position: absolute;
+      z-index: 200;
+      cursor:pointer;
+
+      &:hover {
+        color:$rr-blue;
+      }
+    }
+
+    .header-nav {
+      position: absolute;
+      border: 1px solid #eee;
+      border-top: none;
+      background: #ffffff;
+      //background: #eee;
+      line-height: 24px;
+      height: 40px;
+      padding: 8px 0px;
+      color: #888;
+      right: 20px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      //box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+      font-size: 12px;
+
+      ul, li, a {
+        list-style: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      ul {
+        li {
+          float: left;
+
+          padding: 0 20px;
+          border-right: 1px solid #eee;
+          font-weight: bold;
+          a {
+            text-decoration: none;
+            color: $rr-blue;
+
+            &:hover {
+              color:$rr-light-blue;
+            }
+          }
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+
+    .header-search {
+      position: absolute;
+      right: 20px;
+      top: 52.5px;
+      line-height: 35px;
+
+      input {
+        background: #ffffff;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        line-height: 35px;
+        height: 35px;
+        padding: 0 10px;
+        width: 200px;
+      }
+
+      i {
+        display: inline-block;
+        line-height: 35px;
+        height: 35px;
+      }
+    }
+
+    .logo {
+      position: absolute;
+      height: 60px;
+      margin: 20px;
+
+      img {
+        height: 60px;
+      }
+
+      @media (max-width: 992px) {
+        height: 30px;
+        margin-top: 50px;
+
+        img {
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+

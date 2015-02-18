@@ -1,0 +1,128 @@
+[ng-controller="navCtrl"] {
+  position: relative;
+  .nav {
+    background: $rr-blue;
+    position: relative;
+
+    line-height: 40px;
+    margin-bottom: 20px;
+
+    ul, li {
+      list-style: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul {
+      li {
+        float: left;
+        color: white;
+        text-transform: uppercase;
+        font-size: 14px;
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+
+        @include transition(all 0.3s ease-in-out);
+
+        a {
+          padding: 0 20px;
+          text-decoration: none;
+          color: inherit;
+          white-space: nowrap;
+        }
+
+        &.active, &:hover {
+          background: #1377cc;
+        }
+
+        > ul {
+          display: none;
+          position: absolute;
+          background: darken($rr-blue,5%);
+          min-width: 200px;
+
+          > li {
+            float: none;
+            display: block;
+            a {
+              display: block;
+            }
+          }
+        }
+
+        &:hover {
+          > ul {
+            display: block;
+          }
+        }
+
+        @media (max-width: 767px) {
+          float: none;
+
+          > ul {
+            position: static;
+          }
+        }
+      }
+    }
+  }
+
+  .mega-menu {
+    position: absolute;
+
+    width: 100%;
+    //height: 400px;
+    z-index: 10;
+    margin-top: 40px;
+    text-transform: uppercase;
+
+    [data-mega] {
+      position: absolute;
+      width: 100%;
+      padding: 15px 0;
+      display: none;
+      background: white;
+      box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+      border-bottom: 3px solid $rr-blue;
+
+      * {
+        @include transition(none);
+      }
+
+      ul, li {
+        list-style: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        background: none;
+        float: none;
+        color: #333;
+      }
+
+      ul {
+        li {
+          clear: both;
+          text-transform: none;
+          a {
+            display: block;
+          }
+          &:hover {
+            background: #eee;
+          }
+        }
+      }
+
+      img {
+        max-width: 100%;
+        border-radius: 3px;
+//        padding-right: 15px;
+//        margin-top: 15px;
+//        margin-bottom: 15px;
+      }
+
+    }
+  }
+}
+

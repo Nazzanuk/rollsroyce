@@ -1,0 +1,23 @@
+.footer {
+  background: $rr-blue;
+  color: #ffffff;
+  line-height: 40px;
+  min-height: 40px;
+  padding: 0 30px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  a, a:hover {
+    color: #ffffff;
+  }
+
+  .fa {
+    padding: 0 10px;
+  }
+
+  div {
+    display: block;
+  }
+}

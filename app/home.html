@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Rolls Royce</title>
+
+    <script src="modernizr.js"></script>
+    <link rel="stylesheet" href="bower.css"/>
+    <link rel="stylesheet" href="app.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Exo:200,300,400,500,600,700&subset=latin,greek-ext,latin-ext'
+          rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+
+<body ng-app="RollsRoyce">
+
+<div ng-controller="headerCtrl">
+    <div class="header">
+        <div class="header-menu hidden-md hidden-lg" ng-click="SideNavService.toggleSidebar(true);">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="container-fluid" style="position: relative;">
+            <div class="header-nav">
+                <ul>
+                    <li class="hidden-sm hidden-xs"><a href="#">246 Subscriptions</a></li>
+                    <li><i class="fa fa-envelope"></i> &nbsp; <a href="#">4</a></li>
+                    <li><i class="fa fa-user"></i> <span class="hidden-xs">&nbsp; Hello <a href="#">Donovan Butcher</a></span>
+                    </li>
+                    <li><i class="fa fa-cog"></i> <span class="hidden-xs">&nbsp; <a href="#">My Profile</a></span></li>
+                    <li><i class="fa fa-sign-out"></i> <span class="hidden-xs">&nbsp; <a href="#">Logout</a></span></li>
+                </ul>
+            </div>
+
+            <div class="header-search">
+                &nbsp; &nbsp; <i class="fa fa-search"></i>
+                &nbsp; &nbsp; <i class="fa fa-user"></i>
+                <input type="search" class="hidden-xs pull-left" placeholder="Search Rolls-Royce"/>
+            </div>
+
+            <div class="logo">
+                <img src="http://www.rolls-royce.com/Images/rr_logo_trans_tcm92-833.gif" alt=""/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="box clearfix">
+        <div style="height: 20px;" class="hidden-md hidden-lg"></div>
+        <div ng-controller="navCtrl" class="hidden-xs hidden-sm">
+            <div class="nav clearfix">
+
+                <div class="mega-menu">
+                    <div data-mega="communities" class="clearfix">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="col-sm-12"><strong>Group Communities</strong></div>
+                                <ul>
+                                    <li><a href="#">Engineering</a></li>
+                                    <li><a href="#">Holiday Calendar</a></li>
+                                    <li><a href="#">Commercial</a></li>
+                                    <li><a href="#">Customer Management & Services</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="col-sm-12"><strong>Management Communities</strong></div>
+                                <ul>
+                                    <li><a href="#">Manufacturing Engineering</a></li>
+                                    <li><a href="#">Operations Management</a></li>
+                                    <li><a href="#">Project Management</a></li>
+                                    <li><a href="#">Supply Chain Management</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="col-sm-12"><strong>&nbsp;</strong></div>
+                                <ul>
+                                    <li><a href="#">Finance</a></li>
+                                    <li><a href="#">Human Resources</a></li>
+                                    <li><a href="#">Purchasing</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="col-sm-12">
+                                    <img src="img/workday.png" alt=""/>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div data-mega="about" class="clearfix">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="col-sm-12"><strong>About Rolls-Royce</strong></div>
+                                <ul>
+                                    <li><a href="#">What we do</a></li>
+                                    <li><a href="#">Who we are</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="col-sm-12"><strong>&nbsp;</strong></div>
+                                <ul>
+                                    <li><a href="#">Where we operate</a></li>
+                                    <li><a href="#">Our technology</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="col-sm-12"><strong>&nbsp;</strong></div>
+                                <ul>
+                                    <li><a href="#">Our story</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="col-sm-12">
+                                    <img src="img/workday.png" alt=""/>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="#">Home Page</a>
+                    </li>
+                    <li>
+                        <a href="#">People Finder</a>
+                    </li>
+                    <li class="active" ng-click="toggleMegaMenu('communities')">
+                        <a>My Communities &nbsp; <i class="fa fa-chevron-down"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">My Division</a>
+                    </li>
+                    <li ng-click="toggleMegaMenu('about')">
+                        <a href="#">About Us &nbsp; <i class="fa fa-chevron-down"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">For You</a>
+                    </li>
+                </ul>
+                <!--<div style="margin: 3px 20px;">-->
+                <!--<a class="btn btn-blue pull-right" href="#">Launch GSP</a>-->
+                <!--</div>-->
+            </div>
+        </div>
+
+        <div ng-controller="sideNavCtrl">
+            <div class="semiBackground" ng-click="SideNavService.toggleSidebar(false);"></div>
+            <div class="sideNavCtrl hidden-md hidden-lg">
+                <div class="header-menu" ng-click="SideNavService.toggleSidebar(false);">
+                    <i class="fa fa-arrow-left"></i>
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="#">Home Page</a>
+                    </li>
+                    <li>
+                        <a href="#">People Finder</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">My Communities &nbsp; <i class="fa fa-chevron-down"></i></a>
+                        <ul>
+                            <li class="active"><a href="#">Marine</a></li>
+                            <li><a href="#">Nuclear</a></li>
+                            <li><a href="#">Rolls-Royce Power Systems</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">My Division</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us &nbsp; <i class="fa fa-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">Land</a></li>
+                            <li><a href="#">Sea</a></li>
+                            <li><a href="#">Air</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">For You</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div ng-controller="homeCtrl">
+            <div class="home">
+
+                <!--MARINE NEWS SLIDER-->
+                <div class="col-xs-12" style="height: 235px;">
+                    <h2>Latest Marine News</h2>
+
+                    <div class="row slides clearfix" data-marine-news="0">
+                        <div class="slide-prev" ng-click="prevNews()">
+                            <i class="fa fa-chevron-left"></i>
+                        </div>
+                        <div class="slide-next" ng-click="nextNews()">
+                            <i class="fa fa-chevron-right"></i>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="slide">
+                                <div class="slide-image"
+                                     style="background-image: url('https://unsplash.it/800/500/?random&1');"></div>
+                                <div class="slide-overlay">
+                                    <div class="pull-right">14.11.11</div>
+                                    <h3>Seol</h3>
+
+                                    <p>dsnjdsnj ds dls fldsj fdlsj fdlj dsfl</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 hidden-xs">
+                            <div class="slide">
+                                <div class="slide-image"
+                                     style="background-image: url('https://unsplash.it/800/500/?random&2');"></div>
+                                <div class="slide-overlay">
+                                    <div class="pull-right">14.11.11</div>
+                                    <h3>Norway / China</h3>
+
+                                    <p>dsnjdsnj ds dls fldsj fdlsj fdlj dsfl</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 hidden-sm hidden-xs">
+                            <div class="slide">
+                                <div class="slide-image"
+                                     style="background-image: url('https://unsplash.it/800/500/?random&3');"></div>
+                                <div class="slide-overlay">
+                                    <div class="pull-right">14.11.11</div>
+                                    <h3>Hamburg</h3>
+
+                                    <p>dsnjdsnj ds dls fldsj fdlsj fdlj dsfl</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row slides clearfix" data-marine-news="1">
+                        <div class="slide-prev" ng-click="prevNews()">
+                            <i class="fa fa-chevron-left"></i>
+                        </div>
+                        <div class="slide-next" ng-click="nextNews()">
+                            <i class="fa fa-chevron-right"></i>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="slide">
+                                <div class="slide-image"
+                                     style="background-image: url('https://unsplash.it/800/500/?random&221');"></div>
+                                <div class="slide-overlay">
+                                    <div class="pull-right">14.11.11</div>
+                                    <h3>Seol</h3>
+
+                                    <p>dsnjdsnj ds dls fldsj fdlsj fdlj dsfl</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 hidden-xs">
+                            <div class="slide">
+                                <div class="slide-image"
+                                     style="background-image: url('https://unsplash.it/800/500/?random&222');"></div>
+                                <div class="slide-overlay">
+                                    <div class="pull-right">14.11.11</div>
+                                    <h3>Norway / China</h3>
+
+                                    <p>dsnjdsnj ds dls fldsj fdlsj fdlj dsfl</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 hidden-sm hidden-xs">
+                            <div class="slide">
+                                <div class="slide-image"
+                                     style="background-image: url('https://unsplash.it/800/500/?random&223');"></div>
+                                <div class="slide-overlay">
+                                    <div class="pull-right">14.11.11</div>
+                                    <h3>Hamburg</h3>
+
+                                    <p>dsnjdsnj ds dls fldsj fdlsj fdlj dsfl</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row slides clearfix" data-marine-news="2">
+                        <div class="slide-prev" ng-click="prevNews()">
+                            <i class="fa fa-chevron-left"></i>
+                        </div>
+                        <div class="slide-next" ng-click="nextNews()">
+                            <i class="fa fa-chevron-right"></i>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="slide">
+                                <div class="slide-image"
+                                     style="background-image: url('https://unsplash.it/800/500/?random&2321');"></div>
+                                <div class="slide-overlay">
+                                    <div class="pull-right">14.11.11</div>
+                                    <h3>Seol</h3>
+
+                                    <p>dsnjdsnj ds dls fldsj fdlsj fdlj dsfl</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 hidden-xs">
+                            <div class="slide">
+                                <div class="slide-image"
+                                     style="background-image: url('https://unsplash.it/800/500/?random&2322');"></div>
+                                <div class="slide-overlay">
+                                    <div class="pull-right">14.11.11</div>
+                                    <h3>Norway / China</h3>
+
+                                    <p>dsnjdsnj ds dls fldsj fdlsj fdlj dsfl</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 hidden-sm hidden-xs">
+                            <div class="slide">
+                                <div class="slide-image"
+                                     style="background-image: url('https://unsplash.it/800/500/?random&2323');"></div>
+                                <div class="slide-overlay">
+                                    <div class="pull-right">14.11.11</div>
+                                    <h3>Hamburg</h3>
+
+                                    <p>dsnjdsnj ds dls fldsj fdlsj fdlj dsfl</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--SLIDE NAVIGATION-->
+                <div class="col-xs-12 clearfix">
+                    <div class="slide-nav">
+                        <div class="nav-item" ng-class="{active: currentNews == 0}" ng-click="changeNews(0)">
+                            <i class="fa fa-list"></i> Featured
+                        </div>
+                        <div class="nav-item" ng-class="{active: currentNews == 1}" ng-click="changeNews(1)">
+                            <i class="fa fa-list"></i> Most Recent
+                        </div>
+                        <div class="nav-item" ng-class="{active: currentNews == 2}" ng-click="changeNews(2)">
+                            <i class="fa fa-list"></i> Archived
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-8">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="news-tab" ng-class="{'active':isActiveTab(0)}" ng-click="setActiveTab(0)">In Other News</div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="news-tab" ng-class="{'active':isActiveTab(1)}" ng-click="setActiveTab(1)">Most Read</div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="news-tab" ng-class="{'active':isActiveTab(2)}" ng-click="setActiveTab(2)">Most Commented</div>
+                        </div>
+                    </div>
+
+                    <div class="news-items" ng-show="isActiveTab(0)">
+                        <div class="news-item clearfix">
+                            <img src="https://unsplash.it/150/100/?random&99991" class="pull-left"/>
+                            <div class="news-item-date">01/08/2014</div>
+                            <div class="news-item-title">Rolls-Royce Holdings plc 2014 Full-Year Results</div>
+                            <p>We have met guidance for 2014 revenue and profit in challenging conditions while
+                                continuing to build strong foundations for future growth.</p>
+                        </div>
+
+                        <div class="news-item clearfix">
+                            <img src="https://unsplash.it/150/100/?random&99992" class="pull-left"/>
+                            <div class="news-item-date">13/09/2014</div>
+                            <div class="news-item-title">Rolls-Royce sets up new regional subsidiary MTU Middle East</div>
+                            <p>Rolls-Royce has set up MTU Middle East as a new regional sales and service subsidiary with head office in Dubai.</p>
+                        </div>
+
+                        <div class="news-item clearfix">
+                            <img src="https://unsplash.it/150/100/?random&99993" class="pull-left"/>
+                            <div class="news-item-date">25/11/2014</div>
+                            <div class="news-item-title">Rolls-Royce awarded production and support contracts valued up to $442 million for F-35B Liftsystem</div>
+                            <p>Rolls-Royce has been awarded three contracts totalling up to $442 million to produce and support LiftSystems™ for F-35B Lightning II aircraft</p>
+                        </div>
+                    </div>
+
+                    <div class="news-items" ng-show="isActiveTab(1)">
+
+                        <div class="news-item clearfix">
+                            <img src="https://unsplash.it/150/100/?random&999982" class="pull-left"/>
+                            <div class="news-item-date">13/09/2014</div>
+                            <div class="news-item-title">Rolls-Royce sets up new regional subsidiary MTU Middle East</div>
+                            <p>Rolls-Royce has set up MTU Middle East as a new regional sales and service subsidiary with head office in Dubai.</p>
+                        </div>
+
+                        <div class="news-item clearfix">
+                            <img src="https://unsplash.it/150/100/?random&999983" class="pull-left"/>
+                            <div class="news-item-date">25/11/2014</div>
+                            <div class="news-item-title">Rolls-Royce awarded production and support contracts valued up to $442 million for F-35B Liftsystem</div>
+                            <p>Rolls-Royce has been awarded three contracts totalling up to $442 million to produce and support LiftSystems™ for F-35B Lightning II aircraft</p>
+                        </div>
+
+                        <div class="news-item clearfix">
+                            <img src="https://unsplash.it/150/100/?random&999981" class="pull-left"/>
+                            <div class="news-item-date">01/08/2014</div>
+                            <div class="news-item-title">Rolls-Royce Holdings plc 2014 Full-Year Results</div>
+                            <p>We have met guidance for 2014 revenue and profit in challenging conditions while
+                                continuing to build strong foundations for future growth.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-items" ng-show="isActiveTab(2)">
+
+                        <div class="news-item clearfix">
+                            <img src="https://unsplash.it/150/100/?random&999993" class="pull-left"/>
+                            <div class="news-item-date">25/11/2014</div>
+                            <div class="news-item-title">Rolls-Royce awarded production and support contracts valued up to $442 million for F-35B Liftsystem</div>
+                            <p>Rolls-Royce has been awarded three contracts totalling up to $442 million to produce and support LiftSystems™ for F-35B Lightning II aircraft</p>
+                        </div>
+
+                        <div class="news-item clearfix">
+                            <img src="https://unsplash.it/150/100/?random&999991" class="pull-left"/>
+                            <div class="news-item-date">01/08/2014</div>
+                            <div class="news-item-title">Rolls-Royce Holdings plc 2014 Full-Year Results</div>
+                            <p>We have met guidance for 2014 revenue and profit in challenging conditions while
+                                continuing to build strong foundations for future growth.</p>
+                        </div>
+
+                        <div class="news-item clearfix">
+                            <img src="https://unsplash.it/150/100/?random&999992" class="pull-left"/>
+                            <div class="news-item-date">13/09/2014</div>
+                            <div class="news-item-title">Rolls-Royce sets up new regional subsidiary MTU Middle East</div>
+                            <p>Rolls-Royce has set up MTU Middle East as a new regional sales and service subsidiary with head office in Dubai.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="campaign" style="background-image: url('https://unsplash.it/300/300/?random&99994')">
+                                <div class="campaign-overlay">Campaign 1</div>
+                            </div>
+                            <div class="campaign" style="background-image: url('https://unsplash.it/300/300/?random&99995')">
+                                <div class="campaign-overlay">Campaign 2</div>
+                            </div>
+                            <div class="campaign" style="background-image: url('https://unsplash.it/300/300/?random&99996')">
+                                <div class="campaign-overlay">Campaign 3</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="grey-box">
+
+                                <h2>People Finder</h2>
+                                <hr style="border-color:#ddd"/>
+
+                                <p><strong>Quick Search</strong></p>
+
+                                <p><input type="text" placeholder="Enter general search term"/></p>
+                                <hr style="border-color:#ddd"/>
+
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <p><strong>First Name</strong></p>
+
+                                    <p><input type="text" placeholder="Enter first name"/></p>
+                                </div>
+                                <div class="col-xs-6">
+                                    <p><strong>Last Name</strong></p>
+
+                                    <p><input type="text" placeholder="Enter last name"/></p>
+                                </div>
+
+                            </div>
+                                <p><strong>Country</strong></p>
+
+                                <p>
+
+                                <div class="select-arrow">
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                                <select>
+                                    <option value="">All countries</option>
+                                    <option value="france">France</option>
+                                    <option value="germany">Germany</option>
+                                    <option value="uk">United Kingdom</option>
+                                </select>
+                                </p>
+
+                                <p><strong>Location</strong></p>
+
+                                <p>
+
+                                <div class="select-arrow">
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                                <select>
+                                    <option value="">All divisions</option>
+                                    <option value="france">France</option>
+                                    <option value="germany">Germany</option>
+                                    <option value="uk">United Kingdom</option>
+                                </select>
+                                </p>
+
+                                <div class="btn btn-blue btn-block">Search &nbsp; <i class="fa fa-search"></i></div>
+                            </div>
+
+                            <h2>Innovation Feed</h2>
+
+                            <hr/>
+
+                            <p><i class="fa fa-rss"></i> &nbsp; &nbsp; <a href="#">Electrical System Cooling </a></p>
+                            <p><i class="fa fa-rss"></i> &nbsp; &nbsp; <a href="#">Component Assessment optimisation at Overhaul </a></p>
+                            <p><i class="fa fa-rss"></i> &nbsp; &nbsp; <a href="#">The 4C's challenge </a></p>
+                            <p><i class="fa fa-rss"></i> &nbsp; &nbsp; <a href="#">Leak Detection in Thin Walled Pipes </a></p>
+                            <p><i class="fa fa-rss"></i> &nbsp; &nbsp; <a href="#">Protecting engine probes from insects </a></p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h2>Your Communities</h2>
+                    <hr/>
+
+                    <div class="community-profile clearfix">
+                        <img src="https://randomuser.me/api/portraits/thumb/men/2.jpg" class="pull-left"/>
+                        <p>RR announces super-luxury SUV. Here's 5 things we know about it <a href="#">http://bit.ly/1JopCj6</a></p>
+                        <p><a href="#">Like</a> &nbsp; | &nbsp; <a href="#">132 &nbsp; <i class="fa fa-thumbs-o-up"></i></a></p>
+
+                    </div>
+
+                    <div class="community-profile clearfix">
+                        <img src="https://randomuser.me/api/portraits/thumb/women/2.jpg" class="pull-left"/>
+                        <p>The Rolls-Royce/Snecma Olympus 593 for Concorde was tested in flight using a Vulcan bomber aircraft. </p>
+                        <p><a href="#">Like</a> &nbsp; | &nbsp; <a href="#">132 &nbsp; <i class="fa fa-thumbs-o-up"></i></a></p>
+
+                    </div>
+
+                    <div class="community-profile clearfix">
+                        <img src="https://randomuser.me/api/portraits/thumb/men/4.jpg" class="pull-left"/>
+                        <p><a href="#">#NavyMBB</a>'s Worth Smith named the NAAA Athlete of the Week, presented by Rolls-Royce. Article and video highlights at: <a href="#">http://bit.ly/1yShgoY </a></p>
+                        <p><a href="#">Like</a> &nbsp; | &nbsp; <a href="#">132 &nbsp; <i class="fa fa-thumbs-o-up"></i></a></p>
+
+                    </div>
+
+                    <img src="img/workday.png" alt="" style="width:100%;border-radius:3px;"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="pull-left">
+                <a href="#"><span class="fa fa-facebook"></span></a>
+                <a href="#"><span class="fa fa-twitter"></span></a>
+                <a href="#"><span class="fa fa-linkedin"></span></a>
+            </div>
+            <div class="pull-right">
+                <a href="#">Sitemap</a> &nbsp;
+                <a href="#">Cookies Policy</a> &nbsp;
+                <!--<a href="#">Legal information</a>-->
+            </div>
+            <div>© Rolls-Royce plc 2015 All rights reserved.</div>
+        </div>
+
+    </div>
+
+    <script src="bower.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

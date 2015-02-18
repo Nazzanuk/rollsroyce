@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Rolls Royce</title>
+
+    <script src="../dist/modernizr.js"></script>
+    <link rel="stylesheet" href="../dist/bower.css"/>
+    <link rel="stylesheet" href="../dist/app.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Exo:200,300,400,500,600,700&subset=latin,greek-ext,latin-ext'
+          rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
+</head>
+<body ng-app="RollsRoyce">
+
+<div ng-controller="headerCtrl">
+    <div class="header">
+        <div class="header-menu hidden-md hidden-lg" ng-click="SideNavService.toggleSidebar(true);">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="container-fluid" style="position: relative;">
+            <div class="header-nav">
+                <ul>
+                    <li class="hidden-sm hidden-xs"><a href="#">246 Subscriptions</a></li>
+                    <li><i class="fa fa-envelope"></i> &nbsp; <a href="#">4</a></li>
+                    <li><i class="fa fa-user"></i> <span class="hidden-xs">&nbsp; Widget Title <a href="#">Donovan Butcher</a></span>
+                    </li>
+                    <li><i class="fa fa-cog"></i> <span class="hidden-xs">&nbsp; <a href="#">My Profile</a></span></li>
+                    <li><i class="fa fa-sign-out"></i> <span class="hidden-xs">&nbsp; <a href="#">Logout</a></span></li>
+                </ul>
+            </div>
+
+            <div class="header-search">
+                &nbsp; &nbsp; <i class="fa fa-search"></i>
+                &nbsp; &nbsp; <i class="fa fa-user"></i>
+                <input type="search" class="hidden-xs pull-left" placeholder="Search Rolls-Royce"/>
+            </div>
+
+            <div class="logo">
+                <img src="http://www.rolls-royce.com/Images/rr_logo_trans_tcm92-833.gif" alt=""/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="box clearfix">
+        <div style="height: 20px;" class="hidden-md hidden-lg"></div>
+        <div ng-controller="navCtrl" class="hidden-xs hidden-sm">
+            <div class="nav clearfix">
+
+                <div class="mega-menu">
+                    <div data-mega="communities" class="clearfix">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="col-sm-12"><strong>Group Communities</strong></div>
+                                <ul>
+                                    <li><a href="#">Engineering</a></li>
+                                    <li><a href="#">Holiday Calendar</a></li>
+                                    <li><a href="#">Commercial</a></li>
+                                    <li><a href="#">Customer Management & Services</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="col-sm-12"><strong>&nbsp;</strong></div>
+                                <ul>
+                                    <li><a href="#">Manufacturing Engineering</a></li>
+                                    <li><a href="#">Operations Management</a></li>
+                                    <li><a href="#">Project Management</a></li>
+                                    <li><a href="#">Supply Chain Management</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="col-sm-12"><strong>&nbsp;</strong></div>
+                                <ul>
+                                    <li><a href="#">Finance</a></li>
+                                    <li><a href="#">Human Resources</a></li>
+                                    <li><a href="#">Purchasing</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="col-sm-12">
+                                    <img src="../dist/img/workday.png" alt=""/>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div data-mega="about" class="clearfix">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="col-sm-12"><strong>About Rolls-Royce</strong></div>
+                                <ul>
+                                    <li><a href="#">What we do</a></li>
+                                    <li><a href="#">Who we are</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="col-sm-12"><strong>&nbsp;</strong></div>
+                                <ul>
+                                    <li><a href="#">Where we operate</a></li>
+                                    <li><a href="#">Our technology</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="col-sm-12"><strong>&nbsp;</strong></div>
+                                <ul>
+                                    <li><a href="#">Our story</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="col-sm-12">
+                                    <img src="../dist/img/workday.png" alt=""/>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="#">Home Page</a>
+                    </li>
+                    <li>
+                        <a href="#">People Finder</a>
+                    </li>
+                    <li class="active" ng-click="toggleMegaMenu('communities')">
+                        <a>My Communities &nbsp; <i class="fa fa-chevron-down"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">My Division</a>
+                    </li>
+                    <li ng-click="toggleMegaMenu('about')">
+                        <a href="#">About Us &nbsp; <i class="fa fa-chevron-down"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">For You</a>
+                    </li>
+                </ul>
+                <!--<div style="margin: 3px 20px;">-->
+                <!--<a class="btn btn-blue pull-right" href="#">Launch GSP</a>-->
+                <!--</div>-->
+            </div>
+        </div>
+
+
+        <div ng-controller="sideNavCtrl">
+            <div class="semiBackground" ng-click="SideNavService.toggleSidebar(false);"></div>
+            <div class="sideNavCtrl hidden-md hidden-lg">
+                <div class="header-menu" ng-click="SideNavService.toggleSidebar(false);">
+                    <i class="fa fa-arrow-left"></i>
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="#">Home Page</a>
+                    </li>
+                    <li>
+                        <a href="#">People Finder</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">My Communities &nbsp; <i class="fa fa-chevron-down"></i></a>
+                        <ul>
+                            <li class="active"><a href="#">Marine</a></li>
+                            <li><a href="#">Nuclear</a></li>
+                            <li><a href="#">Rolls-Royce Power Systems</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">My Division</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us &nbsp; <i class="fa fa-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">Land</a></li>
+                            <li><a href="#">Sea</a></li>
+                            <li><a href="#">Air</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">For You</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div ng-controller="searchCtrl">
+            <div class="search">
+                    <div class="col-sm-3">
+                        <div style="text-align: center">
+                            <img src="img/peoplefinderlogo.png" alt=""/>
+                        </div>
+
+                        <!--<h2>People Finder</h2>-->
+                        <hr/>
+                        <label for="">General Search</label>
+                        <input type="search" placeholder="Search People or skills" ng-model="search"/>
+                        <hr/>
+                        <label for="">First Name</label>
+                        <input type="search" placeholder="First Name" ng-model="firstName"/>
+                        <label for="">Last Name</label>
+                        <input type="search" placeholder="Last Name" ng-model="lastName"/>
+                        <label for="">Role</label>
+                        <input type="search" placeholder="Role"/>
+
+                        <button class="btn btn-blue">Search &nbsp; <i class="fa fa-check"></i></button>
+
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="profile clearfix" ng-repeat="person in people | filter:{ firstName: firstName , lastName: lastName }">
+                            <div class="profile-image pull-left">
+                                <img src="{{person.image}}" alt=""/>
+                            </div>
+                            <div style="padding-left: 115px;position: relative">
+                                <div class="pull-right">
+                                    <i class="fa fa-twitter"></i> &nbsp;
+                                    <i class="fa fa-linkedin"></i>
+                                </div>
+                                <div class="profile-name"><h2>{{person.firstName}} {{person.lastName}}</h2></div>
+                                <p><strong>Business Analyst</strong></p>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <i class="fa fa-phone"></i> &nbsp; {{person.phone}}
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <i class="fa fa-envelope"></i> &nbsp; {{person.email}}
+                                    </div>
+                                    <div class="col-xs-12">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-3">
+
+                        <a class="content-widget">
+                            <div class="widget-overlay">
+                                <div class="widget-title"><h2>Widget Title</h2></div>
+                                <div class="widget-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</div>
+                            </div>
+                            <div class="widget-image" style="background-image: url('https://unsplash.it/300/300/?random&140')"></div>
+                        </a>
+
+                        <a class="content-widget">
+                            <div class="widget-overlay">
+                                <div class="widget-title"><h2>Widget Title</h2></div>
+                                <div class="widget-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</div>
+                            </div>
+                            <div class="widget-image" style="background-image: url('https://unsplash.it/300/300/?random&141')"></div>
+                        </a>
+                    </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="pull-left">
+                <a href="#"><span class="fa fa-facebook"></span></a>
+                <a href="#"><span class="fa fa-twitter"></span></a>
+                <a href="#"><span class="fa fa-linkedin"></span></a>
+            </div>
+            <div class="pull-right">
+                <a href="#">Sitemap</a> &nbsp;
+                <a href="#">Cookies Policy</a> &nbsp;
+                <!--<a href="#">Legal information</a>-->
+            </div>
+            <div>© Rolls-Royce plc 2015 All rights reserved.</div>
+        </div>
+
+    </div>
+
+    <script src="../dist/bower.js"></script>
+    <script src="../dist/app.js"></script>
+</body>
+</html>

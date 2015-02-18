@@ -1,0 +1,475 @@
+
+* {
+	margin:0;
+	padding:0;
+	border:0;
+}
+body {
+	font-family: 'Segoe UI', 'Calibri', 'Trebuchet MS', Arial, sans-serif;
+	font-size:12px;
+	color:#444;
+}
+
+input {
+	font-family: 'Segoe UI', 'Calibri', 'Trebuchet MS', Arial, sans-serif;
+	font-size:12px;
+	color:#616161;
+}
+.left {
+	float:left !important;
+}
+
+.right {
+	float:right !important;
+}
+
+.clear {
+	clear:both;
+}
+
+a {
+	color:#5d83aa;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#7b9519;
+}
+
+h1 {
+	font-weight:bold;
+	color:#5d83aa;
+	padding:5px 0;
+	font-size:24px;
+}
+
+h2 {
+	font-weight:bold;
+	color:#5d83aa;
+	padding:5px 0;
+	font-size:14px;
+}
+
+h3 {
+	font-weight:bold;
+	color:#5d83aa;
+	padding:5px 0;
+	font-size:12px;
+}
+
+p { 
+	padding:5px 0;
+}
+
+body {
+	background:#fff;
+	margin:auto;
+	text-align:center;
+	color:#333;
+}
+
+#wrapper {
+	width:1000px;
+	margin:auto;
+	text-align:left;
+
+}
+
+#header {
+	width:1000px;
+}
+
+#bannerline {
+	width:1000px;
+	height:21px;
+	background-image:url('images/bannerline.png');
+	float:left;
+	margin:15px 0 5px 0;
+}
+
+#logo {
+	width:216px;
+	height:82px;
+	background-image:url('images/vasslogo.png');
+	float:left;
+	margin:15px;
+	margin-top:30px;
+}
+
+#slogan {
+	width:448px;
+	height:28px;
+	background-image:url('images/slogan.png');
+	float:left;
+	margin:15px;
+	margin-top:63px;
+	margin-left:35px;
+}
+
+#peoplefinderlogo {
+	width:143px;
+	height:104px;
+	background-image:url('images/peoplefinderlogo.png');
+	float:right;
+	margin:15px;
+	margin-right:25px;
+}
+
+#menubar {
+	width:1000px;
+	height:35px;
+	background-image:url('images/menubar.png');
+	float:right;
+	margin:5px 0;
+}
+
+.menuitem {
+	font-size:12px;
+	padding:10px 30px;
+	height:15px;
+	color:#fff;
+	font-weight:bold;
+	font-family: 'Segoe UI', 'Calibri', 'Trebuchet MS', Arial, sans-serif;
+	float:left;
+}
+#main {
+	width:1000px;
+	margin:5px;
+}
+.column {
+	float:left;
+	width:305px;
+	margin:10px;
+}
+.name {
+	font-size:30px;
+	font-weight:bold;
+	color:#002e62;
+}
+.job {
+	font-size:14px;
+	font-weight:bold;
+	color:#98bf00;
+	margin-bottom:5px;
+}
+#profile {
+	font-weight:bold;
+	height:170px;
+}
+#profileimage {
+	width:176px;
+	height:157px;
+	float:left;
+	overflow:hidden;
+	border-radius:10px;
+	background-color:#333;
+	margin-right:10px;
+}
+.button {
+	width:80px;
+	height:18px;
+	float:left;
+	margin-top:10px;
+	padding:8px 0;
+	color:#fff;
+	text-align:center;
+	font-weight:bold;
+}
+.green {
+	background-image:url('images/greenbutton.png');
+}
+.blue {
+	background-image:url('images/bluebutton.png');
+}
+.profiletext {
+	float:left;
+	height:23px;
+	width:100px;
+}
+.underline {
+	width:100%;
+	height:3px;
+	margin-bottom:3px;
+	overflow:hidden;
+}
+
+.u1 {
+	height:3px;
+	width:20px;
+	background-color:#7b9519;
+	float:left;
+	margin-right:3px;
+}
+
+.u2 {
+	height:3px;
+	width:20px;
+	background-color:#a1c517;
+	float:left;
+	margin-right:3px;
+}
+
+.u3 {
+	height:3px;
+	width:20px;
+	background-color:#174170;
+	float:left;
+	margin-right:3px;
+}
+
+.u4 {
+	height:3px;
+	width:235px;
+	background-color:#5d83aa;
+	float:left;
+}
+
+.reportthis {
+	font-weight:bold;
+	color:#98bf00;
+	margin-top:10px;
+}
+
+.reportthis img {
+	float:left;
+	margin-right:5px;
+	margin-top:-5px;
+}
+
+.widget {
+	margin-bottom:20px;
+}
+
+.contact p {
+	margin-left:20px;
+}
+
+.username {
+	font-weight:bold;
+}
+
+.time {
+	color:#888;
+	padding-top:0;
+	margin-top:0;
+}
+
+.mwpic {
+	width:60px;
+	height:50px;
+	float:left;
+	overflow:hidden;
+	border-radius:10px;
+	background-color:#333;
+	margin-right:10px;
+	margin-top:7px;
+	clear:both;
+}
+
+.mwpic img{
+	width:60px;
+	height:auto;
+}
+
+.mwtext {
+	float:left;
+	width:230px;
+}
+.messagewall .reportthis {
+	float:right;
+	margin-top:-20px;
+}
+
+.messagewall .reportthis img{
+	margin-top:0;
+}
+
+.reporttext {
+	display:inline-block;
+	width:70px;
+}
+
+#addmessage {
+	width:305px;
+	height:83px;
+	background-image:url('images/message.png');
+	margin:15px 0;
+	color:#333;
+}
+
+#addtext {
+	margin:10px;
+	padding:0 10px;
+	width:285px;
+	height:30px;
+	vertical-align: middle;
+	line-height:30px;
+	border-radius:5px;
+	color:#333;
+}
+#addbutton {
+	float:right;
+	height:23px;
+	line-height:23px;
+	border-radius:5px;
+	padding:0 10px;
+	margin:0 10px;
+	background-color:#fff;
+	color:#002e62;
+	font-weight:bold;
+}
+#search {
+	border:#dfdfdf 1px solid;
+	width:100%;
+	height:30px;
+	vertical-align: middle;
+	line-height:30px;
+	margin-top:15px;
+}
+
+.search {
+	border:#dfdfdf 1px solid;
+	width:235px;
+	height:25px;
+	vertical-align: middle;
+	line-height:25px;
+	margin-top:15px;
+	float:left;
+}
+
+
+.smallsearch {
+	display:inline-block;
+	width:58px;
+	height:15px;
+	float:left;
+	padding:5px 0;
+	color:#fff;
+	text-align:center;
+	font-weight:bold;
+	background-image:url('images/smallbluebutton.png');
+	margin-top:15px;
+	margin-left:12px;
+	margin-bottom:15px;
+}
+
+.greybox {
+	width:11px;
+	height:11px;
+	margin:15px 5px 0px 0;
+	border:#dfdfdf 1px solid;
+	display:inline-block;
+	margin-bottom:-2px;
+	font-size:0;
+	overflow: hidden;
+}
+.indentbox {
+	width:11px;
+	height:11px;
+	margin:0px 10px 0px 20;
+	border:#dfdfdf 1px solid;
+	display:inline-block;
+	margin-bottom:-2px;
+	font-size:0;
+	overflow: hidden;
+}
+.searchtext {
+	margin:13px 0 0px 0;
+	
+}
+
+.filtertitle {
+	color:#a1c517;
+	font-size:14px;
+	font-weight:bold;
+	padding:10px 0;
+}
+.resultname {
+	font-weight:bold;
+	color:#5d83aa;
+	font-size:14px;
+}
+.resulttitle {
+	color:#A1C517;
+}
+.mwtext img {
+	margin-right:10px;
+}
+.result {
+	margin-bottom:15px;
+	padding-bottom:15px;
+	float:left;
+	border-bottom:1px solid #ededed;
+}
+.chaticon {
+	float:right;
+	margin-top:5px;
+}
+ol {
+	padding-left:20px;
+}
+ul {
+	padding-left:20px;
+}
+li {
+	padding:3px 0;
+}.pad {
+	height:10px;
+	overflow:hidden;
+	width:100%;
+}
+
+/* widgets page */
+
+.peoplewidget {
+	margin:20px 20px 20px 0;
+	width:auto;
+	border:1px solid #cecece;
+	-webkit-box-shadow: 0px 0px 5px 0px #cecece;
+	-moz-box-shadow: 0px 0px 5px 0px #cecece;
+	box-shadow: 0px 0px 5px 0px #cecece;
+	float:left;
+}
+
+.peoplesize {
+	margin:20px;
+	width:260px;
+}
+
+.peoplewidget .u4{
+	width:190px;
+}
+
+.peoplewidget .search{
+	width:185px;
+	margin-left:-20px;
+}
+
+.peoplewidget .filtertitle{
+	width:190px;
+}
+
+.whitelist, .bluelist{
+	height:20px;
+	float:left;
+	width:250px;
+	padding:2px 2px;
+	line-height:15px;
+}
+
+.bluelist{
+	background:#eef3f7;
+}
+
+.whitelist .search, .bluelist .search{
+	width:150px;
+	float:right;
+	padding:0 3px;
+	margin:0;
+	height:20px;
+	vertical-align: middle;
+	line-height:20px;
+	display:inline;
+	margin-top:-15px;
+}
+

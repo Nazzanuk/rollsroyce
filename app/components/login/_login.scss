@@ -1,0 +1,41 @@
+.login-image {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url('https://unsplash.it/1000/1000/?random&1335&blur');
+  background-size: cover;
+}
+
+.login-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #ffffff;
+  opacity: 0.8;
+
+}
+
+[ng-controller="loginCtrl"] {
+  position: relative;
+  z-index: 10;
+
+  .box {
+    border-bottom: 3px solid $rr-blue;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .login {
+    padding: 20px 20px 0;
+
+    img {
+      max-width: 200px;
+    }
+
+  }
+}
+
